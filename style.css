@@ -408,6 +408,7 @@ a {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 3.5rem;
 }
 
 .hero-img {
