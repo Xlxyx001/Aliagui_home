@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Aliagui Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ─── ANNONCE (bandeau défilant) ─── -->
+    <div
+      class="group flex items-center overflow-hidden bg-amber-800 py-2.5 text-[px] font-medium uppercase tracking-[0.15em] text-[#f5efe3]"
+    >
+      <div
+        class="flex w-max animate-[marquee_15s_linear_infinite] whitespace-nowrap group-hover:[animation-play-state:paused] motion-reduce:animate-none"
+      >
+        <span class="pr-[10px]"
+          >Livraison disponible à Abidjan · Commandez via WhatsApp au +225 07 77
+          46 53 86</span
+        >
+        <span class="pr-[60px]"
+          >Livraison disponible à Abidjan · Commandez via WhatsApp au +225 07 77
+          46 53 86</span
+        >
+      </div>
+    </div>
+
+    <!-- ─── NAVBAR ─── -->
+    <header class="sticky top-0 z-30 border-b border-[#d5cbbc] bg-[#f5efe3]">
+      <div
+        class="mx-auto flex h-[70px] max-w-[1400px] items-center px-5 lg:px-8"
+      >
+        <!-- Gauche : burger (mobile) / liens (desktop) -->
+        <div class="flex flex-1 items-center">
+          <button
+            type="button"
+            id="sidebarOpenBtn"
+            aria-controls="mobileSidebar"
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+            class="-ml-1 flex items-center p-2 text-[#1b3a52] transition-colors hover:text-[#008000] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008000] lg:hidden"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          </button>
+
+          <nav
+            class="hidden items-center gap-7 text-[11px] uppercase tracking-[0.18em] lg:flex"
+          >
+            <a
+              href="index.html#collections"
+              class="transition-colors hover:text-[#008000]"
+              >Collections</a
+            >
+            <a
+              href="index.html#histoire"
+              class="transition-colors hover:text-[#008000]"
+              >Histoire</a
+            >
+            <a
+              href="index.html#showroom"
+              class="transition-colors hover:text-[#008000]"
+              >Showroom</a
+            >
+          </nav>
+        </div>
+
+        <!-- Centre : logo (image + nom en dessous) -->
+        <a
+          href="index.html"
+          class="flex shrink-0 flex-col items-center"
+          aria-label="Aliagui Home – Accueil"
+        >
+          <img
+            src=""
+            alt="Aliagui Home"
+            class="h-10 w-auto object-contain"
+            onerror="this.style.display = 'none'"
+          />
+          <span
+            class="font-[Cormorant_Garamond,serif] text-[22px] uppercase leading-none tracking-[0.35em] text-[#1b3a52]"
+            >Aliagui</span
+          >
+          <span
+            class="mt-0.5 text-[9px] uppercase leading-none tracking-[0.45em] text-amber-950"
+            >Home</span
+          >
+        </a>
+
+        <!-- Droite : contact / whatsapp / panier -->
+        <div class="flex flex-1 items-center justify-end gap-6">
+          <a
+            href="contact.html"
+            class="hidden text-[11px] uppercase tracking-[0.18em] transition-colors hover:text-[#008000] lg:inline"
+            >Contact</a
+          >
+          <a
+            href="#"
+            aria-label="WhatsApp"
+            class="transition-colors hover:text-[#008000]"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+          </a>
+          <button
+            type="button"
+            aria-label="Panier"
+            class="flex items-center p-1 text-[#1b3a52] transition-colors hover:text-[#008000] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008000]"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Fond sombre derrière la sidebar mobile -->
+      <div
+        id="sidebarBackdrop"
+        class="fixed inset-0 z-40 bg-grey/60 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Sidebar mobile -->
+      <aside
+        id="mobileSidebar"
+        class="fixed inset-y-0 left-0 z-50 flex h-full w-[82%] max-w-[300px] -translate-x-full flex-col bg-amber-800 text-[#f5efe3] shadow-2xl transition-transform duration-300 ease-in-out motion-reduce:transition-none lg:hidden"
+        aria-hidden="true"
+      >
+        <div
+          class="flex items-center justify-between border-b border-[#f5efe3]/10 px-6 py-5"
+        >
+          <span
+            class="font-[Cormorant_Garamond,serif] text-lg uppercase tracking-[0.3em]"
+            >Menu</span
+          >
+          <button
+            type="button"
+            id="sidebarCloseBtn"
+            aria-label="Fermer le menu"
+            class="p-1 text-[#f5efe3] transition-colors hover:text-[#008000] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008000]"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-1 flex-col overflow-y-auto px-6 py-4">
+          <a
+            href="index.html#collections"
+            class="border-b border-[#f5efe3]/10 py-4 text-[13px] uppercase tracking-[0.18em] transition-colors hover:text-[#008000]"
+            >Collections</a
+          >
+          <a
+            href="index.html#histoire"
+            class="border-b border-[#f5efe3]/10 py-4 text-[13px] uppercase tracking-[0.18em] transition-colors hover:text-[#008000]"
+            >Histoire</a
+          >
+          <a
+            href="index.html#showroom"
+            class="border-b border-[#f5efe3]/10 py-4 text-[13px] uppercase tracking-[0.18em] transition-colors hover:text-[#008000]"
+            >Showroom</a
+          >
+          <a
+            href="contact.html"
+            class="py-4 text-[13px] uppercase tracking-[0.18em] transition-colors hover:text-[#008000]"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="border-t border-[#f5efe3]/10 px-6 py-5">
+          <a
+            href="#"
+            class="flex items-center gap-3 text-[12px] uppercase tracking-[0.15em] text-[#f5efe3]/75 transition-colors hover:text-[#008000]"
+          >
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- CONTACT HEADER -->
+    <section class="contact-header">
+      <h1>Nous contacter</h1>
+      <p>
+        Une question sur nos collections, une commande sur-mesure ou simplement
+        l'envie d'échanger ? L'équipe Aliagui Home est à votre écoute.
+      </p>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-container">
+      <div class="contact-info">
+        <h3>Nos Coordonnées</h3>
+
+        <div class="info-block">
+          <span class="icon">📍</span>
+          <div>
+            <h4>Showroom</h4>
+            <p>Riviera Anono<br />Abidjan, Côte d'Ivoire</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <span class="icon">📞</span>
+          <div>
+            <h4>Téléphone & WhatsApp</h4>
+            <a href="tel:+2250000000000">+225 07 77 46 53 86</a>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <span class="icon">✉️</span>
+          <div>
+            <h4>E-mail</h4>
+            <a href="mailto:dorkyassi@gmail.com">dorkyassi@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <span class="icon">🕐</span>
+          <div>
+            <h4>Horaires d'ouverture</h4>
+            <p>Du Lundi au Samedi<br />De 9h00 à 18h00</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group bl">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresse E-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Votre Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Envoyer le message</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="wordmark">ALIAGUI</span>
+            <span class="sub text-white">HOME</span>
+            <p>
+              Maison de linge de chambre africain.<br />
+              Le cocon inspiré de nos racines
+            </p>
+          </div>
+          <div class="footer-col">
+            <h5>Collections</h5>
+            <ul>
+              <li><a href="#">Antique</a></li>
+              <li><a href="#">Héritage</a></li>
+              <li><a href="#">Prestige</a></li>
+              <li><a href="#">Signature</a></li>
+              <li><a href="#">Éditions limitées</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>La Maison</h5>
+            <ul>
+              <li><a href="#">Notre histoire</a></li>
+              <li><a href="#">Showroom</a></li>
+              <li><a href="#">Programme fidélité</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Légal</h5>
+            <ul>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
+              <li><a href="#">CGV</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Aliagui Home. Tous droits réservés.</p>
+          <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
