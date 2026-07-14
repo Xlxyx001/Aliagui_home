@@ -4,18 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – Aliagui Home</title>
+  <title>Aliagui Home – La douceur a une mémoire</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
   <!-- ─── ANNONCE (bandeau défilant) ─── -->
-  <div
+   <div
     class="group flex items-center overflow-hidden bg-amber-800 py-2.5 text-[15px] font-medium uppercase tracking-[0.15em] text-[#f5efe3]">
     <div
       class="flex w-max animate-[marquee_15s_linear_infinite] whitespace-nowrap group-hover:[animation-play-state:paused] motion-reduce:animate-none">
@@ -29,31 +31,32 @@
   <!-- ─── NAVBAR ─── -->
   <header class="sticky top-0 z-30 border-b border-white bg-[#fbf7ef] ">
     <div class="mx-auto flex h-[70px] max-w-[1400px] items-center px-5 lg:px-8">
+
       <!-- Gauche : burger (mobile) / liens (desktop) -->
       <div class="flex flex-1 items-center">
         <button type="button" id="sidebarOpenBtn" aria-controls="mobileSidebar" aria-expanded="false"
           aria-label="Ouvrir le menu"
-          class="-ml-1 flex items-center p-2 text-[#1b3a52] transition-colors hover:text-[#008000] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008000] lg:hidden">
+          class="-ml-1 flex items-center p-2 text-[#1b3a52] transition-colors  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 lg:hidden">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
             aria-hidden="true">
             <path d="M3 12h18M3 6h18M3 18h18" />
           </svg>
         </button>
 
-        <nav class="hidden items-center gap-7 text-[11px] uppercase tracking-[0.18em] lg:flex">
-          <a href="index.html" class="transition-colors hover:text-[#008000]">Accueil</a>
-          <a href="index.html#histoire" class="transition-colors hover:text-[#008000]">Histoire</a>
-          <a href="index.html#showroom" class="transition-colors hover:text-[#008000]">Showroom</a>
+        <nav class="hidden items-center gap-5 text-[11px] uppercase tracking-[0.18em] lg:flex ">
+          <a href="index.html" class="transition-colors">Accueil</a>
+          <a href="histoire.html" sclass="transition-colors hover:text-[#008000]">Histoire</a>
+          <a href="#showroom" class="transition-colors hover:text-[#008000]">Showroom</a>
         </nav>
       </div>
 
       <!-- Centre : logo (image + nom en dessous) -->
-      <a href="index.html" class="flex shrink-0 flex-col items-center" aria-label="Aliagui Home – Accueil">
-        <img src="images/Gemini_Generated_Image_5kzipl5kzipl5kzi-removebg-preview.png" alt="Aliagui Home"
-          class="h-10 w-auto object-contain" onerror="this.style.display = 'none'" />
+      <a href="#" class="flex shrink-0 flex-col items-center" aria-label="Aliagui Home – Accueil">
+        <img src="images/Gemini_Generated_Image_5kzipl5kzipl5kzi-removebg-preview.png" alt=""
+          class="h-10 w-auto object-contain" onerror="this.style.display='none'" />
         <span
           class="font-[Cormorant_Garamond,serif] text-[22px] uppercase leading-none tracking-[0.35em] text-[#1b3a52]"></span>
-        <span class="mt-0.5 text-[9px] uppercase leading-none tracking-[0.45em] text-amber-950"></span>
+        <span class="mt-5 text-[11px] uppercase leading-none tracking-[0.50em] text-amber-950 "></span>
       </a>
 
       <!-- Droite : contact / whatsapp / panier -->
@@ -80,17 +83,17 @@
 
     <!-- Fond sombre derrière la sidebar mobile -->
     <div id="sidebarBackdrop"
-      class="fixed inset-0 z-40 bg-grey/60 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+      class="fixed inset-0 z-40 bg-grey/60opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
       aria-hidden="true"></div>
 
     <!-- Sidebar mobile -->
     <aside id="mobileSidebar"
-      class="fixed inset-y-0 left-0 z-50 flex h-full w-[82%] max-w-[300px] -translate-x-full flex-col bg-amber-800 text-[#f5efe3] shadow-2xl transition-transform duration-300 ease-in-out motion-reduce:transition-none lg:hidden"
+      class="fixed inset-y-0 gap-5 left-0 z-50 flex h-full w-[82%] max-w-[200px] -translate-x-full flex-col bg-amber-800 text-[#f5efe3] shadow-2xl transition-transform duration-300 ease-in-out motion-reduce:transition-none lg:hidden"
       aria-hidden="true">
       <div class="flex items-center justify-between border-b border-[#f5efe3]/10 px-6 py-5">
         <span class="font-[Cormorant_Garamond,serif] text-lg uppercase tracking-[0.3em]">Menu</span>
         <button type="button" id="sidebarCloseBtn" aria-label="Fermer le menu"
-          class="p-1 text-[#f5efe3] transition-colors hover:text- focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ">
+          class="p-1 text-[#f5efe3] transition-colors  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008000]">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
             aria-hidden="true">
             <path d="M18 6L6 18M6 6l12 12" />
@@ -122,109 +125,156 @@
     </aside>
   </header>
 
-  <!-- CONTACT HEADER -->
-  <section class="contact-header">
-    <h1>Nous contacter</h1>
-    <p>
-      Une question sur nos collections, une commande sur-mesure ou simplement
-      l'envie d'échanger ? L'équipe Aliagui Home est à votre écoute.
-    </p>
-  </section>
-
-  <!-- CONTACT CONTENT -->
-  <section class="contact-container">
-    <div class="contact-info">
-      <h3>Nos Coordonnées</h3>
-
-      <div class="info-block">
-        <span class="icon">📍</span>
+  <section id="boutique">
+    <div class="products-section">
+      <div class="products-header">
         <div>
-          <h4>Showroom</h4>
-          <p>Riviera Anono<br />Abidjan, Côte d'Ivoire</p>
+          <p class="section-eyebrow ">Boutique</p>
+          <h3 class="section-title">Notre Collection exclusive</h3>
         </div>
       </div>
 
-      <div class="info-block">
-        <span class="icon">📞</span>
-        <div>
-          <h4>Téléphone & WhatsApp</h4>
-          <a href="tel:+2250000000000">+225 07 77 46 53 86</a>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="images/nzre.png" alt="Draps en pagne" />
+            <span class="product-badge bg-amber-950">Nouveau</span>
+            <button class="product-add bg-amber-800">+ Ajouter</button>
+          </div>
+          <div class="product-info">
+            <p class="category">Literie</p>
+            <h4>N'Zrê</h4>
+            <p class="product-price">40 000 CFA</p>
+          </div>
         </div>
-      </div>
 
-      <div class="info-block">
-        <span class="icon">✉️</span>
-        <div>
-          <h4>E-mail</h4>
-          <a href="mailto:dorkyassi@gmail.com">dorkyassi@gmail.com</a>
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="images/upp.png" alt="Taies d'oreiller" />
+            <button class="product-add bg-amber-800">+ Ajouter</button>
+          </div>
+          <div class="product-info">
+            <p class="category">Literie</p>
+            <h4>Dèmè</h4>
+            <p class="product-price">40 000 CFA</p>
+          </div>
         </div>
-      </div>
 
-      <div class="info-block">
-        <span class="icon">🕐</span>
-        <div>
-          <h4>Horaires d'ouverture</h4>
-          <p>Du Lundi au Samedi<br />De 9h00 à 18h00</p>
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="images/pop.jpeg" alt="Parures complètes" />
+            <span class="product-badge bg-amber-950">Bestseller</span>
+            <button class="product-add bg-amber-800">+ Ajouter</button>
+          </div>
+          <div class="product-info">
+            <p class="category">Collection</p>
+            <h4>Fɛfɛ </h4>
+            <p class="product-price">40 000 CFA</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="images/e0e49bd3bcb79dafffbd43fd5d10bad4.jpg" alt="Éditions limitées" />
+            <span class="product-badge bg-amber-950 ">Limité</span>
+            <button class="product-add bg-amber-800">+ Ajouter</button>
+          </div>
+          <div class="product-info">
+            <p class="category">Édition limitée</p>
+            <h4>Upendo </h4>
+            <p class="product-price">40 000 CFA</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <form class="contact-form">
-      <div class="form-group bl">
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" required />
+  </section>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="images/co ant4.jpeg" alt="Draps en pagne" />
+        <span class="product-badge bg-amber-950">Nouveau</span>
+        <button class="product-add bg-amber-800">+ Ajouter</button>
       </div>
-
-      <div class="form-group">
-        <label for="email">Adresse E-mail</label>
-        <input type="email" id="email" name="email" required />
+      <div class="product-info">
+        <p class="category">Literie</p>
+        <h4>Assouan</h4>
+        <p class="product-price">40 000 CFA</p>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="subject">Sujet</label>
-        <input type="text" id="subject" name="subject" required />
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="images/co ant5.jpeg" alt="Taies d'oreiller" />
+        <button class="product-add bg-amber-800">+ Ajouter</button>
       </div>
-
-      <div class="form-group">
-        <label for="message">Votre Message</label>
-        <textarea id="message" name="message" required></textarea>
+      <div class="product-info">
+        <p class="category">Literie</p>
+        <h4>Odo</h4>
+        <p class="product-price">40 000 CFA</p>
       </div>
+    </div>
 
-      <button type="submit" class="btn-submit">Envoyer le message</button>
-    </form>
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="images/co ant6.jpg" alt="Parures complètes" />
+        <span class="product-badge bg-amber-950">Bestseller</span>
+        <button class="product-add bg-amber-800">+ Ajouter</button>
+      </div>
+      <div class="product-info">
+        <p class="category">Collection Terre d'ivoire</p>
+        <h4>Nhyria </h4>
+        <p class="product-price">40 000 CFA</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="images/co ant7.jpg" alt="Éditions limitées" />
+        <span class="product-badge bg-amber-950 ">Limité</span>
+        <button class="product-add bg-amber-800">+ Ajouter</button>
+      </div>
+      <div class="product-info">
+        <p class="category">Collection antique</p>
+        <h4>Kènèya </h4>
+        <p class="product-price">40 000 CFA</p>
+      </div>
+    </div>
+  </div>
+  </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="wordmark">ALIAGUI</span>
-          <span class="wordfake text-blue-950">HOME</span>
-          <p>
+          <span class="wordmark ">ALIAGUI</span>
+          <span class="wordfake text-blue-950 ">HOME</span>
+          <p class="text-black">
             Maison de linge de chambre africain.<br />
             Le cocon inspiré de nos racines
           </p>
         </div>
+
         <div class="footer-col">
           <h5 class="font-semibold">Collections</h5>
           <ul>
-            <li><a href="#">Antique</a></li>
-            <li><a href="#">Héritage</a></li>
-            <li><a href="#">Prestige</a></li>
-            <li><a href="#">Signature</a></li>
-            <li><a href="#">Éditions limitées</a></li>
+            <li><a href="#collections">Antique</a></li>
+            <li><a href="#collections">Héritage</a></li>
+            <li><a href="#collections">Prestige</a></li>
+            <li><a href="#collections">Signature</a></li>
+            <li><a href="#boutique">Éditions limitées</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h5 class="font-semibold">La Maison</h5>
           <ul>
-            <li><a href="#">Notre histoire</a></li>
-            <li><a href="#">Showroom</a></li>
-            <li><a href="#">Programme fidélité</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="histoire.html">Notre histoire</a></li>
+            <li><a href="Collections.html">Collection</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h5 class="font-semibold">Légal</h5>
           <ul>
@@ -234,6 +284,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 Aliagui Home. Tous droits réservés.</p>
         <div class="socials">
