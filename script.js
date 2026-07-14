@@ -1,55 +1,38 @@
-// ─── SIDEBAR MOBILE ───
-// Ouvre/ferme le menu latéral mobile (remplace l'ancien menu déroulant).
-document.addEventListener("DOMContentLoaded", function () {
-  const openBtn = document.getElementById("sidebarOpenBtn");
-  const closeBtn = document.getElementById("sidebarCloseBtn");
-  const sidebar = document.getElementById("mobileSidebar");
-  const backdrop = document.getElementById("sidebarBackdrop");
+const sidebarOpenBtn = document.getElementById('sidebarOpenBtn');
+const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
+const mobileSidebar = document.getElementById('mobileSidebar');
+const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 
-  if (!openBtn || !sidebar || !backdrop) return;
+function openSidebar() {
+  mobileSidebar.classList.remove('-translate-x-full');
+  mobileSidebar.setAttribute('aria-hidden', 'false');
+  sidebarOpenBtn.setAttribute('aria-expanded', 'true');
 
-  const sidebarLinks = sidebar.querySelectorAll("a");
-  let isOpen = false;
+  sidebarBackdrop.classList.remove('pointer-events-none', 'opacity-0');
+  sidebarBackdrop.classList.add('opacity-100');
 
-  function openSidebar() {
-    isOpen = true;
-    sidebar.classList.remove("-translate-x-full");
-    backdrop.classList.remove("opacity-0", "pointer-events-none");
-    sidebar.setAttribute("aria-hidden", "false");
-    openBtn.setAttribute("aria-expanded", "true");
-    document.documentElement.classList.add("overflow-hidden");
-    document.body.classList.add("overflow-hidden");
-    if (closeBtn) closeBtn.focus();
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSidebar() {
+  mobileSidebar.classList.add('-translate-x-full');
+  mobileSidebar.setAttribute('aria-hidden', 'true');
+  sidebarOpenBtn.setAttribute('aria-expanded', 'false');
+
+  sidebarBackdrop.classList.remove('opacity-100');
+  sidebarBackdrop.classList.add('opacity-0');
+  sidebarBackdrop.classList.add('pointer-events-none');
+
+  document.body.style.overflow = '';
+}
+
+sidebarOpenBtn.addEventListener('click', openSidebar);
+sidebarCloseBtn.addEventListener('click', closeSidebar);
+sidebarBackdrop.addEventListener('click', closeSidebar);
+
+// Fermer avec la touche Échap
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !mobileSidebar.classList.contains('-translate-x-full')) {
+    closeSidebar();
   }
-
-  function closeSidebar() {
-    isOpen = false;
-    sidebar.classList.add("-translate-x-full");
-    backdrop.classList.add("opacity-0", "pointer-events-none");
-    sidebar.setAttribute("aria-hidden", "true");
-    openBtn.setAttribute("aria-expanded", "false");
-    document.documentElement.classList.remove("overflow-hidden");
-    document.body.classList.remove("overflow-hidden");
-    openBtn.focus();
-  }
-
-  openBtn.addEventListener("click", openSidebar);
-  if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
-  backdrop.addEventListener("click", closeSidebar);
-  sidebarLinks.forEach(function (link) {
-    link.addEventListener("click", closeSidebar);
-  });
-
-  // Ferme avec la touche Échap
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && isOpen) closeSidebar();
-  });
-
-  // Si la fenêtre est agrandie au-delà du breakpoint desktop (lg = 1024px)
-  // pendant que la sidebar est ouverte, on la referme (elle est cachée en
-  // CSS de toute façon, ceci remet juste le scroll et les attributs aria
-  // en ordre).
-  window.addEventListener("resize", function () {
-    if (isOpen && window.innerWidth >= 1024) closeSidebar();
-  });
 });
