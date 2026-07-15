@@ -579,7 +579,18 @@ a {
   align-items: flex-end;
   margin-bottom: 48px;
 }
-
+ #subject-fit {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+}
 .see-all {
   font-size: 11px;
   letter-spacing: 0.2em;
